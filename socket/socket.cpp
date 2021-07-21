@@ -2,6 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <Eigen/Dense>
+#include <emp-ot/emp-ot.h>
 
 using namespace std;
 

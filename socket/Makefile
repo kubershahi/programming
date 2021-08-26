@@ -1,11 +1,17 @@
 CC = g++-11
 # CFLAGS  = -g -Wall
 
-all:  socket.o
-	$(CC) $(CFLAGS) socket.o -o file
+server:  server.o
+	$(CC) $(CFLAGS) server.o -o server
 
-socket.o:	socket.cpp
-	$(CC) $(CFLAGS) -c socket.cpp
+server.o:	server.cpp
+	$(CC) $(CFLAGS) -c server.cpp
+
+server2: server2.o
+	$(CC) $(CFLAGS) server2.o -o server2
+
+server2.o: server2.cpp
+	$(CC) $(CFLAGS) -c server2.cpp
 
 clean: 
-	$(RM) file *.o *~
+	$(RM) file server server2 *.o *~
